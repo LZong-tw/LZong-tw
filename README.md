@@ -18,13 +18,15 @@ I work on repo-scoped hooks, verification gates, lifecycle reminders, and local 
 | [pdf2epub-pro](https://github.com/LZong-tw/pdf2epub-pro) | High-fidelity PDF to EPUB pipeline with chunked parsing, restored PDF links, offline referenced-content appendices, and clean cover generation. | Clone and run from source |
 | [readwise-reader-management](https://github.com/LZong-tw/readwise-reader-management) | Python scripts for Readwise Reader automation: tags, article operations, exports, and batch account maintenance. | Clone and configure locally |
 
-## Live package signals
+## Raw package telemetry
+
+These badges show public registry download counts, not validated user adoption. I treat them as early distribution telemetry and pair them with issues, stars, public references, and install feedback before making traction claims.
 
 [![lattice npm downloads](https://img.shields.io/npm/dw/@lzong.tw/lattice?label=lattice%20downloads)](https://www.npmjs.com/package/@lzong.tw/lattice)
 [![clawback npm downloads](https://img.shields.io/npm/dw/@lzong.tw/clawback?label=clawback%20downloads)](https://www.npmjs.com/package/@lzong.tw/clawback)
 [![usage advisor npm downloads](https://img.shields.io/npm/dw/claude-code-usage-advisor?label=usage%20advisor%20downloads)](https://www.npmjs.com/package/claude-code-usage-advisor)
 
-If one of these tools saves you a debugging session, a star on that repo tells me which experiments are worth keeping alive.
+If one of these tools saves you a debugging session, a star on that repo is the cleanest signal that the experiment is worth keeping alive.
 
 ## What I am not trying to do
 
