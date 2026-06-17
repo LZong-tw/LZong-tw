@@ -1,33 +1,22 @@
-# I build the runtime layer agents run on
+# Verification and inspection tools for AI coding agents
 
-I work on repo-scoped hooks, verification gates, lifecycle reminders, and local analytics for AI coding agents. The center of gravity is practical infrastructure for Claude Code, Codex CLI, and GitHub Copilot CLI: tools that make agent work easier to trust in real repositories.
+I work the operator side of Claude Code, Codex CLI, and GitHub Copilot CLI: hooks that stop agents from claiming "done" before code is checked, diagnostics that show what is really in the context window, and independent notes on how these tools behave at runtime.
 
-## Current focus
+Everything here is independent, version-pinned when behavior can drift, and built around reproducible evidence rather than download-count theater.
 
-- Agent hook runtimes that work across shells, operating systems, and coding-agent clients.
-- Verification loops that turn "the agent says it is done" into something the machine checks.
-- Local-first analytics and guardrails for developers who already use AI coding tools heavily.
+## Start Here
 
-## Projects
-
-| Project | What it is for | Start here |
+| Project | What it proves | Start here |
 | --- | --- | --- |
-| [lattice](https://github.com/LZong-tw/lattice) | Repo-scoped AI client hook runtime for Claude Code, Codex CLI, and GitHub Copilot CLI. Shared policy gates, lifecycle hooks, and provider integrations for real repos. | `pnpm add @lzong.tw/lattice` |
-| [clawback](https://github.com/LZong-tw/clawback) | Verification loops for Claude Code and Codex: protected files, post-edit format/lint, stop-time typecheck, and context-compaction reminders. | `npx @lzong.tw/clawback` |
-| [claude-code-usage-advisor](https://github.com/LZong-tw/claude-code-usage-advisor) | Read-only local analyzer for Claude Code history. It recommends practical model, effort, permission, sandbox, and prompt-cache profiles. | `npx claude-code-usage-advisor` |
-| [pdf2epub-pro](https://github.com/LZong-tw/pdf2epub-pro) | High-fidelity PDF to EPUB pipeline with chunked parsing, restored PDF links, offline referenced-content appendices, and clean cover generation. | Clone and run from source |
-| [readwise-reader-management](https://github.com/LZong-tw/readwise-reader-management) | Python scripts for Readwise Reader automation: tags, article operations, exports, and batch account maintenance. | Clone and configure locally |
+| [clawback](https://github.com/LZong-tw/clawback) | Stop-time verification hooks for Claude Code and Codex: protected files, post-edit checks, typecheck/lint before "done", and compaction reminders. | `npx @lzong.tw/clawback` |
+| [claude-code-field-notes](https://github.com/LZong-tw/claude-code-field-notes) | Independent, version-pinned notes on Claude Code runtime behavior: context, models, hooks, permissions, telemetry, transcripts, and settings. | Read the map |
+| [ctxray](https://github.com/LZong-tw/ctxray) | Local-first inspection for agent context and routing: what was sent, why it routed that way, and where the context budget went. | `node src/cli/ctxray.mjs help` |
+| [lattice](https://github.com/LZong-tw/lattice) | Repo-scoped hook dispatcher and policy layer for Claude Code, Codex CLI, and GitHub Copilot CLI. | `pnpm add @lzong.tw/lattice` |
+| [production-verify](https://github.com/LZong-tw/production-verify) | Smoke tests and architecture proofs for services that need concrete production-readiness checks. | Read the README |
+| [turn-off-screen](https://github.com/LZong-tw/turn-off-screen) | A small Windows utility that solved a real hardware annoyance for other people too. | Clone and run locally |
 
-## Raw package telemetry
+## Operating Rules
 
-These badges show public registry download counts, not validated user adoption. I treat them as early distribution telemetry and pair them with issues, stars, public references, and install feedback before making traction claims.
-
-[![lattice npm downloads](https://img.shields.io/npm/dw/@lzong.tw/lattice?label=lattice%20downloads)](https://www.npmjs.com/package/@lzong.tw/lattice)
-[![clawback npm downloads](https://img.shields.io/npm/dw/@lzong.tw/clawback?label=clawback%20downloads)](https://www.npmjs.com/package/@lzong.tw/clawback)
-[![usage advisor npm downloads](https://img.shields.io/npm/dw/claude-code-usage-advisor?label=usage%20advisor%20downloads)](https://www.npmjs.com/package/claude-code-usage-advisor)
-
-If one of these tools saves you a debugging session, a star on that repo is the cleanest signal that the experiment is worth keeping alive.
-
-## What I am not trying to do
-
-I do not want AI-generated volume, drive-by PR noise, or generic personal branding. The useful work is the shipped tool, the repro, the release note, and the issue that documents a real failure mode.
+- I do not treat npm downloads, clone counts, or badge numbers as adoption proof.
+- I prefer small reproducible artifacts: a failing hook transcript, a version-pinned runtime note, a test that blocks the bad path, or an issue that documents a real failure mode.
+- I do not want AI-generated volume, drive-by PR noise, or generic personal branding. The useful work is the shipped tool, the repro, the release note, and the field note that survives being checked by someone who knows the system.
