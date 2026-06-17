@@ -13,7 +13,7 @@ Everything here is independent, version-pinned when behavior can drift, and buil
 | [ctxray](https://github.com/LZong-tw/ctxray) | Local-first inspection for agent context and routing: what was sent, why it routed that way, and where the context budget went. | `node src/cli/ctxray.mjs help` |
 | [lattice](https://github.com/LZong-tw/lattice) | Repo-scoped hook dispatcher and policy layer for Claude Code, Codex CLI, and GitHub Copilot CLI. | `pnpm add @lzong.tw/lattice` |
 | [production-verify](https://github.com/LZong-tw/production-verify) | Smoke tests and architecture proofs for services that need concrete production-readiness checks. | Read the README |
-| [turn-off-screen](https://github.com/LZong-tw/turn-off-screen) | A small Windows utility that solved a real hardware annoyance for other people too. | Clone and run locally |
+| [readwise-reader-management](https://github.com/LZong-tw/readwise-reader-management) | Older Python automation scripts for Readwise Reader; useful as a small off-thesis proof that practical utilities can find users. | Clone and configure locally |
 
 ## Operating Rules
 
