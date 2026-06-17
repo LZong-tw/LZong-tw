@@ -2,7 +2,7 @@
 
 I work the operator side of Claude Code, Codex CLI, and GitHub Copilot CLI: hooks that stop agents from claiming "done" before code is checked, diagnostics that show what is really in the context window, and independent notes on how these tools behave at runtime.
 
-Everything here is independent, version-pinned when behavior can drift, and built around reproducible evidence rather than download-count theater.
+Everything here is independent, version-pinned when behavior can drift, and built around reproducible evidence.
 
 ## Start Here
 
@@ -12,8 +12,8 @@ Everything here is independent, version-pinned when behavior can drift, and buil
 | [claude-code-field-notes](https://github.com/LZong-tw/claude-code-field-notes) | Independent, version-pinned notes on Claude Code runtime behavior: context, models, hooks, permissions, telemetry, transcripts, and settings. | Read the map |
 | [ctxray](https://github.com/LZong-tw/ctxray) | Local-first inspection for agent context and routing: what was sent, why it routed that way, and where the context budget went. | `node src/cli/ctxray.mjs help` |
 | [lattice](https://github.com/LZong-tw/lattice) | Repo-scoped hook dispatcher and policy layer for Claude Code, Codex CLI, and GitHub Copilot CLI. | `pnpm add @lzong.tw/lattice` |
-| [production-verify](https://github.com/LZong-tw/production-verify) | Smoke tests and architecture proofs for services that need concrete production-readiness checks. | Read the README |
-| [readwise-reader-management](https://github.com/LZong-tw/readwise-reader-management) | Older Python automation scripts for Readwise Reader; useful as a small off-thesis proof that practical utilities can find users. | Clone and configure locally |
+| [claude-code-usage-advisor](https://github.com/LZong-tw/claude-code-usage-advisor) | Read-only inspection of Claude Code history, with practical recommendations for model, effort, permission, sandbox, and cache settings. | `npx claude-code-usage-advisor` |
+| [readwise-reader-management](https://github.com/LZong-tw/readwise-reader-management) | Off-topic and older than the AI-agent tools, but it has the clearest public signal here: real stars and forks, no marketing. | Clone and configure locally |
 
 ## Operating Rules
 
